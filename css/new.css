@@ -4915,6 +4915,16 @@ h5 {
     color: #000
 }
 
+#navi li a.current {
+    color: #393b44;
+    position: relative;
+}
+
+#navi li a.current:before {
+    content: '\25BA\20';
+    white-space: normal;
+}
+
 .page {
     width: 100%;
     margin-bottom: 7em
