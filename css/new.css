@@ -65,7 +65,8 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #fff
+    background-color: #161625;
+
 }
 
 [tabindex="-1"]:focus {
@@ -335,6 +336,17 @@ small {
     margin-right: auto;
     margin-left: auto
 }
+.profile-circle {
+    width: 50px;
+    height: 50px;
+    background: url(../images/Ram.jpeg) no-repeat; 
+    background-size: 125px 95px;
+    background-position: 60%;
+    -moz-border-radius: 70px; 
+    -webkit-border-radius: 70px; 
+    border-radius: 70px;
+    box-shadow: inset 0 0 0 1.2px rgba(11, 214, 59, 0.73);
+}
 
 @media (min-width:576px) {
     .container {
@@ -375,7 +387,8 @@ small {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-right: -15px;
-    margin-left: -15px
+    margin-left: -15px;
+    overflow-wrap: break-word;
 }
 
 .no-gutters {
@@ -4376,7 +4389,8 @@ a.text-dark:hover {
 
 body {
     font-family: Poppins, Arial, sans-serif;
-    background: #fff;
+    background: #161625;
+    ;
     font-size: 16px;
     line-height: 1.8;
     font-weight: 400;
@@ -4415,7 +4429,7 @@ h3,
 h4,
 h5 {
     line-height: 1.5;
-    color: #000;
+    color: #e2dbdb;
     font-weight: 400
 }
 
@@ -4447,7 +4461,7 @@ h5 {
 .ftco-navbar-light .container {
     width: 1110px;
     margin: 0 auto;
-    padding: 0
+    padding: 10px
 }
 
 .ftco-navbar-light .navbar-brand {
@@ -4480,7 +4494,7 @@ h5 {
     padding-bottom: .7rem;
     padding-left: 20px;
     padding-right: 20px;
-    color: #000;
+    color: #e2dbdb;
     font-weight: 400;
     opacity: 1!important
 }
@@ -4552,6 +4566,108 @@ h5 {
     text-decoration: none;
     color: #393b44;
     outline: 0!important
+}
+
+.ftco-navbar-light.scrolled {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin-top: -130px;
+    background: #000 !important;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 0 15px;
+}
+
+.ftco-navbar-light.scrolled .nav-item>.nav-link {
+    color: #e2dbdb !important;
+}
+
+@media (max-width: 991.98px) {
+    .ftco-navbar-light.scrolled .nav-item>.nav-link {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-bottom: 20px !important;
+    }
+}
+
+.ftco-navbar-light.scrolled .nav-item.active>a {
+    color: #e2dbdb !important;
+    font-weight: bold;
+}
+
+.ftco-navbar-light.scrolled .nav-item.cta>a {
+    color: #fff !important;
+    background: #3e64ff;
+    border: none !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: .5rem !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    margin-top: 5px !important;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.ftco-navbar-light.scrolled .nav-item.cta>a span {
+    display: inline-block;
+    color: #fff !important;
+}
+
+.ftco-navbar-light.scrolled .nav-item.cta.cta-colored span {
+    border-color: #3e64ff;
+}
+
+@media (max-width: 991.98px) {
+    .ftco-navbar-light.scrolled .navbar-nav {
+        background: none;
+        border-radius: 0px;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+    }
+}
+
+.ftco-navbar-light.scrolled .navbar-toggler {
+    border: none;
+    color: rgba(253, 252, 252, 0.5) !important;
+    border-color: rgba(0, 0, 0, 0.5) !important;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: .1em;
+}
+
+.ftco-navbar-light.scrolled .nav-link {
+    color: #000000 !important;
+}
+
+.ftco-navbar-light.scrolled .nav-link.active {
+    color: #e2dbdb !important;
+    font-weight: bold;
+}
+
+.ftco-navbar-light.scrolled.awake {
+    margin-top: 0px;
+    -webkit-transition: .3s all ease-out;
+    -o-transition: .3s all ease-out;
+    transition: .3s all ease-out;
+}
+
+.ftco-navbar-light.scrolled.sleep {
+    -webkit-transition: .3s all ease-out;
+    -o-transition: .3s all ease-out;
+    transition: .3s all ease-out;
+}
+
+.ftco-navbar-light.scrolled .navbar-brand {
+    color: #000000;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 24px;
 }
 
 .navbar-brand {
@@ -4627,7 +4743,7 @@ h5 {
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 800;
-    color: #393b44;
+    color: #e2dbdb;
     letter-spacing: 4px
 }
 
@@ -4821,15 +4937,47 @@ h5 {
 }
 
 .btn.btn-primary {
-    background: #393b44;
-    border: 1px solid #393b44!important;
+    background: #66bb6a;
+    border: 1px solid #66bb6a!important;
     color: #fff!important
 }
 
 .btn.btn-primary:hover {
-    border: 1px solid #393b44!important;
-    background: #393b44!important;
+    border: 1px solid #53a76c!important;
+    background: #53a76c!important;
     color: #000!important
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 70px;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+  
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-linkedin:before {
+    content: "\f0e1";
+    padding-left: 3px;
+}
+
+.fa-medium {
+    background: #000;
+    color: white;
+}
+
+.fa-github {
+    background: #fff;
 }
 
 .btn.btn-white {
@@ -4847,7 +4995,8 @@ h5 {
 .ftco-about .img-about {
     width: 100%;
     z-index: 0;
-    position: relative
+    position: relative;
+    margin-top: 67px;
 }
 
 .ftco-about .img-about .img {
@@ -4875,7 +5024,7 @@ h5 {
 
 .ftco-about ul.about-info li span:first-child {
     font-weight: 600;
-    color: #000;
+    color: #999;
     width: 130px
 }
 
@@ -4912,11 +5061,11 @@ h5 {
 }
 
 #navi li a {
-    color: #000
+    color: #e2dbdb
 }
 
 #navi li a.current {
-    color: #393b44;
+    color: #e2dbdb;
     position: relative;
 }
 
@@ -4938,7 +5087,7 @@ h5 {
     font-weight: 800;
     font-size: 30px;
     margin-bottom: 30px;
-    color: #393b44
+    color: #e2dbdb
 }
 
 .resume-wrap {
@@ -4968,10 +5117,10 @@ h5 {
 }
 
 .resume-wrap .date {
-    font-weight: 700;
-    font-size: 16px;
+    font-weight: 400;
+    font-size: 12px;
     color: rgba(0, 0, 0, .6);
-    color: #393b44
+    color: #e2dbdb
 }
 
 .resume-wrap h2 {
@@ -4982,7 +5131,7 @@ h5 {
 .resume-wrap .position {
     font-size: 18px;
     font-weight: 700;
-    color: #000
+    color: #e2dbdb
 }
 
 .ftco-partner {
@@ -5511,7 +5660,7 @@ textarea.form-control {
     display: block;
     margin-bottom: 5px;
     text-transform: uppercase;
-    color: #000;
+    color: #e2dbdb;
     letter-spacing: 3px
 }
 
@@ -5911,4 +6060,19 @@ textarea.form-control {
         stroke-dasharray: 89, 200;
         stroke-dashoffset: -136px
     }
+}
+
+.timeline {
+    content: "";
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+    min-height: 8px;
+    min-width: 8px;
+    background-color: #cfcfcf;
+    -webkit-box-shadow: 0 0 2px 10px #fff;
+    box-shadow: 0 0 2px 10px #fff;
+    top: 9px;
 }
