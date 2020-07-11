@@ -65,7 +65,8 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #161625;
+    /* background-color: #161625; */
+    background-color: #282a36;
 
 }
 
@@ -4389,8 +4390,8 @@ a.text-dark:hover {
 
 body {
     font-family: Poppins, Arial, sans-serif;
-    background: #161625;
-    ;
+    /* background: #161625; */
+    background-color: #282a36;
     font-size: 16px;
     line-height: 1.8;
     font-weight: 400;
@@ -4448,7 +4449,7 @@ h5 {
 
 @media (max-width:991.98px) {
     .ftco-navbar-light {
-        background: #000!important;
+        background: #141622!important;
         position: relative;
         top: 0;
         padding-top: 0;
@@ -4574,7 +4575,7 @@ h5 {
     left: 0;
     top: 0;
     margin-top: -130px;
-    background: #000 !important;
+    background: #141622 !important;
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     padding: 0 15px;
@@ -4845,15 +4846,15 @@ h5 {
 }
 
 .btn.btn-primary {
-    background: #66bb6a;
-    border: 1px solid #66bb6a!important;
+    background: #007bb1;
+    border: 1px solid #007bb1!important;
     color: #fff!important
 }
 
 .btn.btn-primary:hover {
-    border: 1px solid #53a76c!important;
-    background: #53a76c!important;
-    color: #000!important
+    border: 1px solid #007bd1!important;
+    background: #007bd1!important;
+    color: #c1b7b7!important
 }
 
 .fa {
@@ -4870,8 +4871,12 @@ h5 {
 }
 
 .fa-linkedin {
-    background: #007bb5;
+    
     color: white;
+}
+
+.linkedin-background {
+    background: #007bb5;
 }
 
 .fa-linkedin:before {
@@ -4884,7 +4889,7 @@ h5 {
     color: white;
 }
 
-.fa-github {
+.github-background {
     background: #fff;
 }
 
@@ -5350,6 +5355,10 @@ h5 {
     font-weight: 600
 }
 
+.contact-me h3 a {
+    color: #fff;
+}
+
 @media (max-width:767.98px) {
     .project .text {
         opacity: 1
@@ -5752,7 +5761,8 @@ textarea.form-control {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
-    border-radius: 4px
+    border-radius: 4px;
+    background-color: #6b6b6d
 }
 
 @media (max-width:991.98px) {
@@ -5970,7 +5980,65 @@ textarea.form-control {
     }
 }
 
-.timeline {
+.anna-uni {
+    width: 50px;
+    height: 50px;
+    background: url(../images/anna.png) no-repeat;
+    background-size: 39px 36px;
+    background-position: 60%;
+}
+
+.sia-logo {
+    width: 50px;
+    height: 50px;
+    background: url(../images/SIA_logo.png) no-repeat;
+    background-size: 39px 36px;
+    background-position: 60%;
+}
+
+.palo-logo {
+    width: 50px;
+    height: 50px;
+    background: url(../images/palo-logo.png) no-repeat;
+    background-size: 39px 36px;
+    background-position: 60%;
+}
+
+.tcs-logo {
+    width: 50px;
+    height: 50px;
+    background: url(../images/tcs-logo.jpg) no-repeat;
+    background-size: 39px 36px;
+    background-position: 60%;
+}
+
+.text ul {
+    padding-inline-start: 0px;
+}
+
+.experience-group-position.experience-group-position.result-card {
+    padding: 0;
+}
+.pp-section .result-card {
+    padding: 0 0 24px;
+}
+.result-card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    padding: 12px 16px 12px 8px;
+    width: 100%;
+}
+
+.experience-group-position__contents {
+    border-left: 2px solid #e9e9e9;
+    margin-left: -5px;
+    padding: 0 0 24px calc(18px - 2px);
+}
+
+.experience-group-position:before {
     content: "";
     display: block;
     position: relative;
@@ -5980,7 +6048,37 @@ textarea.form-control {
     min-height: 8px;
     min-width: 8px;
     background-color: #cfcfcf;
-    -webkit-box-shadow: 0 0 2px 10px #fff;
-    box-shadow: 0 0 2px 10px #fff;
+    -webkit-box-shadow: 0 0 2px 10px #282a36;
+    box-shadow: 0 0 2px 10px #282a36;
     top: 9px;
+}
+
+.result-card__contents {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    overflow: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.result-card__contents p {
+    margin-bottom: 0rem;
+    text-align: justify;
+}
+
+.row p {
+    text-align: justify;
+}
+
+.show-more-less-text a {
+    color: #0073b1;
+}
+
+.show-more a {
+    color: #0073b1;
+}
+
+.result-card__title {
+    color: #e2dbdb;
 }
