@@ -259,6 +259,22 @@ AOS.init({
     };
     goHere();
 
+    var showLess = function() {
+        document.getElementById("show-ita-less").style.display = "block";
+        document.getElementById("show-ita-more").style.display = "none";
+        document.getElementById("toggleItaButton").innerText = "See More";
+        document.getElementById("show-se").style.display = "none";
+        document.getElementById("show-sse").style.display = "none";
+        document.getElementById("toggleSeButton").innerText = "See More Roles";
+        document.getElementById("show-sse-less").style.display = "block";
+        document.getElementById("show-sse-more").style.display = "none";
+        document.getElementById("toggleSseButton").innerText = "See More";
+        document.getElementById("show-se-less").style.display = "block";
+        document.getElementById("show-se-more").style.display = "none";
+        document.getElementById("toggleSeButton").innerText = "See More";
+    }
+    showLess();
+
     var TxtRotate = function(el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
@@ -402,3 +418,73 @@ $(function() {
         return percentage / 100 * 360
     }
 });
+
+var statusIta = "less";
+
+function toggleItaText()
+{
+    
+    if (statusIta == "less") {
+        document.getElementById("show-ita-more").style.display = "block";
+        document.getElementById("show-ita-less").style.display = "none";
+        document.getElementById("toggleItaButton").innerText = "See Less";
+        statusIta = "more";
+    } else if (statusIta == "more") {
+        document.getElementById("show-ita-less").style.display = "block";
+        document.getElementById("show-ita-more").style.display = "none";
+        document.getElementById("toggleItaButton").innerText = "See More";
+        statusIta = "less"
+    }
+}
+
+var statusSse = "less";
+
+function toggleSseText()
+{
+    
+    if (statusSse == "less") {
+        document.getElementById("show-sse-more").style.display = "block";
+        document.getElementById("show-sse-less").style.display = "none";
+        document.getElementById("toggleSseButton").innerText = "See Less";
+        statusSse = "more";
+    } else if (statusSse == "more") {
+        document.getElementById("show-sse-less").style.display = "block";
+        document.getElementById("show-sse-more").style.display = "none";
+        document.getElementById("toggleSseButton").innerText = "See More";
+        statusSse = "less"
+    }
+}
+
+var statusSe = "less";
+
+function toggleSeText()
+{
+    
+    if (statusSe == "less") {
+        document.getElementById("show-se-more").style.display = "block";
+        document.getElementById("show-se-less").style.display = "none";
+        document.getElementById("toggleSeButton").innerText = "See Less";
+        statusSe = "more";
+    } else if (statusSe == "more") {
+        document.getElementById("show-se-less").style.display = "block";
+        document.getElementById("show-se-more").style.display = "none";
+        document.getElementById("toggleSeButton").innerText = "See More";
+        statusSe = "less"
+    }
+}
+
+var statusRole = "less";
+
+function toggleMoreRolesText() {
+    if (statusSe == "less") {
+        document.getElementById("show-se").style.display = "flex";
+        document.getElementById("show-sse").style.display = "flex";
+        document.getElementById("toggleMoreRolesButton").innerText = "See Less Roles";
+        statusSe = "more";
+    } else if (statusSe == "more") {
+        document.getElementById("show-sse").style.display = "none";
+        document.getElementById("show-se").style.display = "none";
+        document.getElementById("toggleMoreRolesButton").innerText = "See More Roles";
+        statusSe = "less"
+    }
+}
