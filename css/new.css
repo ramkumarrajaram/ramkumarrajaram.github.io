@@ -4893,6 +4893,10 @@ h5 {
     background: #fff;
 }
 
+.icon a {
+    color: #fff;
+}
+ 
 .btn.btn-white {
     background: #fff!important;
     border: 1px solid #fff!important;
@@ -6012,8 +6016,37 @@ textarea.form-control {
     background-position: 60%;
 }
 
+.udemy-logo {
+    width: 50px;
+    height: 50px;
+    background: url(../images/Udemy.jpg) no-repeat;
+    background-size: 39px 36px;
+    background-position: 60%;
+}
+
+.linkedin-logo {
+    width: 50px;
+    height: 50px;
+    background: url(../images/linkedIn.jpg) no-repeat;
+    background-size: 39px 36px;
+    background-position: 60%;
+}
+
+.testdome-logo {
+    width: 50px;
+    height: 50px;
+    background: url(../images/testdome.png) no-repeat;
+    background-size: 39px 36px;
+    background-position: 60%;
+    background-color: #282a36;
+}
+
 .text ul {
     padding-inline-start: 0px;
+}
+
+.text a {
+    color: #e2dbdb;
 }
 
 .experience-group-position.experience-group-position.result-card {
