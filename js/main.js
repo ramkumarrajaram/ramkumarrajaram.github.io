@@ -3,7 +3,7 @@ AOS.init({
     easing: 'slide'
 });
 
-(function($) {
+(function ($) {
 
     "use strict";
 
@@ -16,10 +16,10 @@ AOS.init({
         scrollProperty: 'scroll'
     });
 
-    var fullHeight = function() {
+    var fullHeight = function () {
 
         $('.js-fullheight').css('height', $(window).height());
-        $(window).resize(function() {
+        $(window).resize(function () {
             $('.js-fullheight').css('height', $(window).height());
         });
     };
@@ -27,8 +27,8 @@ AOS.init({
     fullHeight();
 
     // loader
-    var loader = function() {
-        setTimeout(function() {
+    var loader = function () {
+        setTimeout(function () {
             if ($('#ftco-loader').length > 0) {
                 $('#ftco-loader').removeClass('show');
             }
@@ -39,9 +39,9 @@ AOS.init({
     $.Scrollax();
 
     // Burger Menu
-    var burgerMenu = function() {
+    var burgerMenu = function () {
 
-        $('body').on('click', '.js-fh5co-nav-toggle', function(event) {
+        $('body').on('click', '.js-fh5co-nav-toggle', function (event) {
 
             event.preventDefault();
 
@@ -55,14 +55,14 @@ AOS.init({
 
     burgerMenu();
 
-    var onePageClick = function() {
+    var onePageClick = function () {
 
-        $(document).on('click', '#ftco-nav a[href^="#"]', function(event) {
+        $(document).on('click', '#ftco-nav a[href^="#"]', function (event) {
             event.preventDefault();
 
             $('html, body').animate({
                 scrollTop: $($.attr(this, 'href')).offset().top - 70
-            }, 500, function() {
+            }, 500, function () {
                 // window.location.hash = href;
             });
         });
@@ -70,7 +70,7 @@ AOS.init({
 
     onePageClick();
 
-    var carousel = function() {
+    var carousel = function () {
         $('.home-slider').owlCarousel({
             loop: true,
             autoplay: true,
@@ -96,7 +96,7 @@ AOS.init({
     };
     carousel();
 
-    $('nav .dropdown').hover(function() {
+    $('nav .dropdown').hover(function () {
         var $this = $(this);
         // 	 timer;
         // clearTimeout(timer);
@@ -104,7 +104,7 @@ AOS.init({
         $this.find('> a').attr('aria-expanded', true);
         // $this.find('.dropdown-menu').addClass('animated-fast fadeInUp show');
         $this.find('.dropdown-menu').addClass('show');
-    }, function() {
+    }, function () {
         var $this = $(this);
         // timer;
         // timer = setTimeout(function(){
@@ -115,13 +115,13 @@ AOS.init({
         // }, 100);
     });
 
-    $('#dropdown04').on('show.bs.dropdown', function() {
+    $('#dropdown04').on('show.bs.dropdown', function () {
         console.log('show');
     });
 
     // scroll
-    var scrollWindow = function() {
-        $(window).scroll(function() {
+    var scrollWindow = function () {
+        $(window).scroll(function () {
             var $w = $(this),
                 st = $w.scrollTop(),
                 navbar = $('.ftco_navbar'),
@@ -160,14 +160,14 @@ AOS.init({
 
     scrollWindow();
 
-    var counter = function() {
+    var counter = function () {
 
-        $('#section-counter, .home-info, .ftco-counter, .ftco-about').waypoint(function(direction) {
+        $('#section-counter, .home-info, .ftco-counter, .ftco-about').waypoint(function (direction) {
 
             if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
 
                 var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-                $('.number').each(function() {
+                $('.number').each(function () {
                     var $this = $(this),
                         num = $this.data('number');
                     console.log(num);
@@ -181,20 +181,20 @@ AOS.init({
     }
     counter();
 
-    var contentWayPoint = function() {
+    var contentWayPoint = function () {
         var i = 0;
-        $('.ftco-animate').waypoint(function(direction) {
+        $('.ftco-animate').waypoint(function (direction) {
 
             if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
 
                 i++;
 
                 $(this.element).addClass('item-animate');
-                setTimeout(function() {
+                setTimeout(function () {
 
-                    $('body .ftco-animate.item-animate').each(function(k) {
+                    $('body .ftco-animate.item-animate').each(function (k) {
                         var el = $(this);
-                        setTimeout(function() {
+                        setTimeout(function () {
                             var effect = el.data('animate-effect');
                             if (effect === 'fadeIn') {
                                 el.addClass('fadeIn ftco-animated');
@@ -246,8 +246,8 @@ AOS.init({
         fixedContentPos: false
     });
 
-    var goHere = function() {
-        $('.mouse-icon').on('click', function(event) {
+    var goHere = function () {
+        $('.mouse-icon').on('click', function (event) {
 
             event.preventDefault();
             $('html,body').animate({
@@ -259,23 +259,22 @@ AOS.init({
     };
     goHere();
 
-    var showLess = function() {
-        document.getElementById("show-ita-less").style.display = "block";
-        document.getElementById("show-ita-more").style.display = "none";
-        document.getElementById("toggleItaButton").innerText = "See More";
-        document.getElementById("show-se").style.display = "none";
-        document.getElementById("show-sse").style.display = "none";
-        document.getElementById("toggleSeButton").innerText = "See More Roles";
-        document.getElementById("show-sse-less").style.display = "block";
-        document.getElementById("show-sse-more").style.display = "none";
-        document.getElementById("toggleSseButton").innerText = "See More";
-        document.getElementById("show-se-less").style.display = "block";
-        document.getElementById("show-se-more").style.display = "none";
-        document.getElementById("toggleSeButton").innerText = "See More";
+    var showLess = function () {
+        var itaLess = "1. Responsible for developing high performance, quality deliverables by adopting industry's best practices such as Test Driven Development (TDD), Behavioural Driven Development (BDD), Object-Oriented Programming, Agile methodologies, SOLID principles, Design Patterns, Functional Programming, Continuous Integration / Continuous Delivery ...<br>"
+        var sseLess = "1. Responsible for developing E-commerce web application and integrating payment modules into the web application<br>2. Develop application using languages - JAVA, HTML, CSS, JSP, JavaScript, MySQL and frameworks such as SPRING and Hibernate<br>"
+        var seLess = "1. Responsible for developing E-Commerce web application involving selection of a product to payment and issuance of the product <br>2. Develop application using languages - JAVA, HTML, CSS, JSP, JavaScript, MySQL and frameworks such as SPRING and Hibernate<br>"
+        document.getElementById('show-ita').innerHTML = itaLess;
+        document.getElementById('show-sse').innerHTML = sseLess;
+        document.getElementById('show-se').innerHTML = seLess;
+        $('#show-sse-less').show();
+        $('#show-se-less').show();
+        $('#show-ita-more').hide();
+        $('#show-sse-more').hide();
+        $('#show-se-more').hide();
     }
     showLess();
 
-    var TxtRotate = function(el, toRotate, period) {
+    var TxtRotate = function (el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
         this.loopNum = 0;
@@ -285,7 +284,7 @@ AOS.init({
         this.isDeleting = false;
     };
 
-    TxtRotate.prototype.tick = function() {
+    TxtRotate.prototype.tick = function () {
         var i = this.loopNum % this.toRotate.length;
         var fullTxt = this.toRotate[i];
 
@@ -311,12 +310,12 @@ AOS.init({
             delta = 500;
         }
 
-        setTimeout(function() {
+        setTimeout(function () {
             that.tick();
         }, delta);
     };
 
-    window.onload = function() {
+    window.onload = function () {
         var elements = document.getElementsByClassName('txt-rotate');
         for (var i = 0; i < elements.length; i++) {
             var toRotate = elements[i].getAttribute('data-rotate');
@@ -338,7 +337,7 @@ AOS.init({
 // $('.page').css('height', $( window ).height());
 
 // scrollspy section
-(function($) {
+(function ($) {
     //variable that will hold the href attr of the links in the menu
     var sections = [];
     //variable that stores the id of the section
@@ -346,7 +345,7 @@ AOS.init({
     //variable for the selection of the anchors in the navbar
     var $navbara = $('#navi a');
 
-    $navbara.click(function(e) {
+    $navbara.click(function (e) {
         //prevent the page from refreshing
         e.preventDefault();
         //set the top offset animation and speed
@@ -357,12 +356,12 @@ AOS.init({
     });
 
     //select all the anchors in the navbar one after another
-    $navbara.each(function() {
+    $navbara.each(function () {
         // and adds them in the sections variable
         sections.push($($(this).attr('href')));
 
     })
-    $(window).scroll(function(e) {
+    $(window).scroll(function (e) {
         // scrollTop retains the value of the scroll top with the reference at the middle of the page
         var scrollTop = $(this).scrollTop() + ($(window).height() / 2);
         //cycle through the values in sections array
@@ -387,7 +386,7 @@ AOS.init({
     })
 })(jQuery);
 
-hash = function(h) {
+hash = function (h) {
     if (history.pushState) {
         history.pushState(null, null, h);
     } else {
@@ -396,9 +395,9 @@ hash = function(h) {
 }
 
 
-$(function() {
+$(function () {
 
-    $(".progress").each(function() {
+    $(".progress").each(function () {
 
         var value = $(this).attr('data-value');
         var left = $(this).find('.progress-left .progress-bar');
@@ -421,17 +420,16 @@ $(function() {
 
 var statusIta = "less";
 
-function toggleItaText()
-{
-    
+function toggleItaText() {
+
+    var itaLess = "1. Responsible for developing high performance, quality deliverables by adopting industry's best practices such as Test Driven Development (TDD), Behavioural Driven Development (BDD), Object-Oriented Programming, Agile methodologies, SOLID principles, Design Patterns, Functional Programming, Continuous Integration / Continuous Delivery ...<br>"
+    var itaMore = "1. Responsible for developing high performance, quality deliverables by adopting industry's best practices such as Test Driven Development (TDD), Behavioural Driven Development (BDD), Object-Oriented Programming, Agile methodologies, SOLID principles, Design Patterns, Functional Programming, Continuous Integration / Continuous Delivery etc. for Full stack application with emphasis on Android and Backend development<br>2. Develop application using languages - JAVA, Kotlin, SQL and frameworks such as SPRING, Hibernate and DAGGER<br>3. Pair with one of the developers in the team daily to ensure each and every line of code developed is tested, reviewed and refactored to ensure better quality<br>4. Responsible for granular commit/push the deliverable to repository using GIT version control<br>5. Deliver and deploy developed deliverables to AWS Elastic Beanstalk and Crashlytics via CI / CD pipeline in Jenkins for DEV, UAT and Production environment<br>6. Create POCs for requirements proposed by Product owners/Client<br>7. Responsible for proposing appropriate solutions to the requirements and have peer discussions on how to improve the efficiency of the application<br>8. Ensure continuous learning across team members by organising sessions such as LUNCH AND LEARN, Code Kata and encourage developers to enrol in such events<br>9. Good team player";
     if (statusIta == "less") {
-        document.getElementById("show-ita-more").style.display = "block";
-        document.getElementById("show-ita-less").style.display = "none";
+        document.getElementById("show-ita").innerHTML = itaMore;
         document.getElementById("toggleItaButton").innerText = "See Less";
         statusIta = "more";
     } else if (statusIta == "more") {
-        document.getElementById("show-ita-less").style.display = "block";
-        document.getElementById("show-ita-more").style.display = "none";
+        document.getElementById("show-ita").innerHTML = itaLess;
         document.getElementById("toggleItaButton").innerText = "See More";
         statusIta = "less"
     }
@@ -439,17 +437,15 @@ function toggleItaText()
 
 var statusSse = "less";
 
-function toggleSseText()
-{
-    
+function toggleSseText() {
+    var sseLess = "1. Responsible for developing E-commerce web application and integrating payment modules into the web application<br>2. Develop application using languages - JAVA, HTML, CSS, JSP, JavaScript, MySQL and frameworks such as SPRING and Hibernate<br>"
+    var sseMore = "1. Responsible for developing E-commerce web application and integrating payment modules into the web application<br>2. Develop application using languages - JAVA, HTML, CSS, JSP, JavaScript, MySQL and frameworks such as SPRING and Hibernate<br>3. Responsible for reviewing the code and mentoring the junior developers<br>4. Responsible for pushing the changes and deploy them to different stages of testing such as DEV, SIT, UAT and Production environments<br>5. Responsible for analysing the requirements stated by the client<br>6. Create POCs and propose best possible solutions for requirements proposed by Product owners/Client<br>7. Responsible for leading and taking ownership of the product and working closely with the product and QA team for quality delivery <br>8. Responsible for driving the sprint to meet the timeline<br>"
     if (statusSse == "less") {
-        document.getElementById("show-sse-more").style.display = "block";
-        document.getElementById("show-sse-less").style.display = "none";
+        document.getElementById("show-sse").innerHTML = sseMore;
         document.getElementById("toggleSseButton").innerText = "See Less";
         statusSse = "more";
     } else if (statusSse == "more") {
-        document.getElementById("show-sse-less").style.display = "block";
-        document.getElementById("show-sse-more").style.display = "none";
+        document.getElementById("show-sse").innerHTML = sseLess;
         document.getElementById("toggleSseButton").innerText = "See More";
         statusSse = "less"
     }
@@ -457,34 +453,16 @@ function toggleSseText()
 
 var statusSe = "less";
 
-function toggleSeText()
-{
-    
+function toggleSeText() {
+    var seMore = "1. Responsible for developing E-Commerce web application involving selection of a product to payment and issuance of the product <br>2. Develop application using languages - JAVA, HTML, CSS, JSP, JavaScript, MySQL and frameworks such as SPRING and Hibernate<br>3. Responsible for analysing and providing optimal solution to the requirement and get them reviewed by the senior engineers<br>4. Responsible for pushing the changes to SVN and deploy them to different stages of testing such as DEV, SIT, UAT and Production environments<br>5. Responsible for delivering the product under water fall SDLC cycle<br>6. Responsible for fixing the bugs<br>";
+    var seLess = "1. Responsible for developing E-Commerce web application involving selection of a product to payment and issuance of the product <br>2. Develop application using languages - JAVA, HTML, CSS, JSP, JavaScript, MySQL and frameworks such as SPRING and Hibernate<br>";
     if (statusSe == "less") {
-        document.getElementById("show-se-more").style.display = "block";
-        document.getElementById("show-se-less").style.display = "none";
+        document.getElementById("show-se").innerHTML = seMore;
         document.getElementById("toggleSeButton").innerText = "See Less";
         statusSe = "more";
     } else if (statusSe == "more") {
-        document.getElementById("show-se-less").style.display = "block";
-        document.getElementById("show-se-more").style.display = "none";
+        document.getElementById("show-se").innerHTML = seLess;
         document.getElementById("toggleSeButton").innerText = "See More";
-        statusSe = "less"
-    }
-}
-
-var statusRole = "less";
-
-function toggleMoreRolesText() {
-    if (statusSe == "less") {
-        document.getElementById("show-se").style.display = "flex";
-        document.getElementById("show-sse").style.display = "flex";
-        document.getElementById("toggleMoreRolesButton").innerText = "See Less Roles";
-        statusSe = "more";
-    } else if (statusSe == "more") {
-        document.getElementById("show-sse").style.display = "none";
-        document.getElementById("show-se").style.display = "none";
-        document.getElementById("toggleMoreRolesButton").innerText = "See More Roles";
         statusSe = "less"
     }
 }
